@@ -1,0 +1,38 @@
+.containerHome{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.imgContainer{
+    width: 250px;
+    height: 400px;
+}
+
+.imgContainer img{
+    max-width: 250px;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.homeSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 400;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.buttonsCo{
+    display: flex;
+    justify-content: flex-start;
+}
