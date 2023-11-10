@@ -1,4 +1,5 @@
 import "./App.scss";
+import About from "./components/About";
 import Header from "./components/Header";
 import Home from "./components/Home"
 
@@ -13,7 +14,7 @@ function App() {
           <Header/>
         </header>
         <section id="home"><Home/></section>
-        <section id="about">about</section>
+        <section id="about"><About/></section>
         <section id="project">project</section>
         <section id="contact">contact</section>
       </main>
