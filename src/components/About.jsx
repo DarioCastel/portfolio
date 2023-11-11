@@ -1,6 +1,6 @@
 import "../css/about.scss";
-import { SiJavascript, SiHtml5, SiCss3,SiMongodb } from "react-icons/si";
-import { FaReact } from "react-icons/fa6";
+import { SiJavascript, SiHtml5, SiCss3,SiMongodb,SiSass,SiGit,SiBootstrap,SiPostman } from "react-icons/si";
+import { FaReact,FaNodeJs } from "react-icons/fa6";
 
 
 const About = () => {
@@ -22,6 +22,12 @@ const About = () => {
           <SiCss3 className="tecnoIcon"/>
           <FaReact className="tecnoIcon"/>
           <SiMongodb className="tecnoIcon"/>
+          <SiSass className="tecnoIcon"/>
+          <SiGit className="tecnoIcon"/>
+          <SiBootstrap className="tecnoIcon"/>
+          <SiPostman className="tecnoIcon"/>
+          <FaNodeJs className="tecnoIcon"/>
+
         </div>
       </div>
     </>
