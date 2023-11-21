@@ -1,0 +1,25 @@
+.titleProjects{
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 40px;
+    width: 100%;
+}
+
+.containerProjects{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+}
+
+.contentProject{
+    width: 100%;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); 
+    gap: 1.5rem;
+    justify-items: center;
+    align-items: center;
+}
