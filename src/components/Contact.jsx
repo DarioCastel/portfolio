@@ -1,10 +1,25 @@
+import { useState } from "react";
 import "../css/contact.scss";
+import Alert from "./Alert";
 import FormContact from "./FormContact";
 
+
 const Contact = () => {
+  const [error, setError] = useState(
+    {
+      textError:"",
+      typeError:"",
+      active:""
+    }
+  )
   return (
     <>
       <div className="contact-form-container">
+        <Alert 
+        textError={error.textError}
+        typeError={error.typeError}
+        active={error.active}
+        />
         <div className="contact-us">
           <div className="contact-header">
             <h1>&#9135;&#9135;&#9135;&#9135;&nbsp;&nbsp;CONTACT US</h1>
@@ -44,7 +59,9 @@ const Contact = () => {
           <h3>hello@adept.com</h3>
         </div>
         <div className="contact-form">
-          <FormContact/>
+          <FormContact
+          setError={setError}
+          />
         </div>
       </div>
     </>

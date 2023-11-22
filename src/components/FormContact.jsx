@@ -3,7 +3,7 @@ import "../css/formContact.scss";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-const FormContact = () => {
+const FormContact = ({setError}) => {
   const form = useRef();
   const [valid, setValid] = useState(true)
 
@@ -17,44 +17,67 @@ const FormContact = () => {
 
     if (user_name === "") {
     setValid(false)
-      console.log("completar userName")
+      setError({
+        textError:"completar campo nombre",
+        typeError:"text",
+        active:"active"
+      })
       return;
     }
   
     if (user_name === "" || !mailregex.test(user_Email)) {
     setValid(false)
-      console.log("completar userName")
+    setError({
+      textError:"completar campo Email",
+      typeError:"text",
+      active:"active"
+    })
       return;
     }
   
     if (message === "") {
     setValid(false)
-      console.log("completar el mensaje")
+    setError({
+      textError:"completar campo mensaje",
+      typeError:"text",
+      active:"active"
+    })
       return;
     }
+    setValid(true)
   };
 
-  const sendEmail = (e) => {
+  const sendEmail = async(e) => {
     e.preventDefault();
     validate();
     if (valid) {
-      emailjs
-        .sendForm(
-          "service_bl2idx9",
-          "template_rg1e85m",
-          form.current,
-          "aghokcv3l9xzt0U9m"
-        )
-        .then(
-          (result) => {
-            console.log(result.text);
-          },
-          (error) => {
-            console.log(error.text);
-          }
-        );
+      try {
+        await emailjs.sendForm('service_ht2egk6', 'Contact_Form', form.current, 'd1coGa8C7PSe-s7fy');
+
+        setError({
+          textError:"mensaje enviado",
+          typeError:"success",
+          active:"active"
+        })
+        
+      } catch (error) {
+        setError({
+          textError:"mensaje NO enviado",
+          typeError:"error",
+          active:"active"
+        })
+      }
     }
-  };
+    setTimeout(()=>{
+      setError({
+        textError:"",
+        typeError:"",
+        active:""
+      })
+
+    },5000)
+  }
+  ;
 
   return (
     <>
