@@ -41,22 +41,11 @@ const Contact = () => {
             </ul>
           </div>
         </div>
-        <div className="header">
-          <h1>Let's Get Started</h1>
-          <h2>Contact us to start your next project!</h2>
-        </div>
-        <div className="address">
-          <i className="fas fa-map-marker-alt"></i>
-          <h3>8266 Gygax</h3>
-          <h3>Norfolk, VA</h3>
-        </div>
-        <div className="phone">
-          <i className="fas fa-phone-alt"></i>
-          <h3>757 287 1608</h3>
-        </div>
-        <div className="email">
-          <i className="fas fa-envelope"></i>
-          <h3>hello@adept.com</h3>
+        <div className="infoPersonal">
+        <a href="https://wa.me/5493764211005" className="wasap"  target="_blank" rel="noreferrer">
+          wasapeame
+        </a>
+        <a href="lecastelnovo@gmail.com" className="mailcontact" target="_blank" rel="noreferrer">mail me</a>
         </div>
         <div className="contact-form">
           <FormContact

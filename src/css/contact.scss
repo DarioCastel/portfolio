@@ -2,6 +2,7 @@
     background: #F4F3F3;
     font-family: "Lato", sans-serif;
     height: 100vh;
+    display: flex;
   }
   
   .contact-us {
@@ -41,7 +42,18 @@
   .contact-header h1 {
     font-size: 1.5rem;
   }
-  
+  .infoPersonal{
+    display: flex;
+    font-size: 3rem;
+  }
+
+  .wasap{
+
+  }
+  .mailContact{
+    
+  }
+
   .social-bar {
     position: absolute;
     bottom: 20px;
@@ -86,6 +98,11 @@
     font-size: 1rem;
     font-weight: 300;
   }
+  .whatsapp{
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
   .address i, .email i, .phone i {
     color: #F8B7D8;
     font-size: 1.7rem;
@@ -132,8 +149,8 @@
     border: 0;
     border-radius: 20px;
     bottom: -20px;
-    background: #9ED8EB;
-    color: white;
+    background: var(--boulder-200);
+    color: var(--boulder-100);
     font-size: 1.1rem;
     font-weight: 300;
     outline: none;
